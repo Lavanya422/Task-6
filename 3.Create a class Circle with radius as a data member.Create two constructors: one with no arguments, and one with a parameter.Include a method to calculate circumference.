@@ -1,0 +1,39 @@
+package com.example;
+
+public class Circle {
+    // Private data member
+    private double radius;
+
+    // No-arg constructor (default radius)
+    public Circle() {
+        this.radius = 1.0;
+    }
+
+    // Constructor with parameter
+    public Circle(double radius) {
+        this.radius = radius;
+    }
+
+    // Method to calculate circumference
+    public double getCircumference() {
+        return 2 * Math.PI * radius;
+    }
+
+    // Method to display details
+    public void display() {
+        System.out.println("Radius: " + radius);
+        System.out.println("Circumference: " + getCircumference());
+    }
+
+    // Main method for testing
+    public static void main(String[] args) {
+        Circle c1 = new Circle();         // Default constructor
+        Circle c2 = new Circle(5.5);      // Parameterized constructor
+
+        System.out.println("Circle 1:");
+        c1.display();
+
+        System.out.println("\nCircle 2:");
+        c2.display();
+    }
+}
